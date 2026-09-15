@@ -1,0 +1,108 @@
+@import '@fontsource/ibm-plex-sans/400.css';
+@import '@fontsource/ibm-plex-sans/500.css';
+@import '@fontsource/ibm-plex-sans/600.css';
+@import '@fontsource/ibm-plex-sans-condensed/500.css';
+@import '@fontsource/ibm-plex-sans-condensed/600.css';
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'IBM Plex Sans', -apple-system, 'Segoe UI', sans-serif;
+  --font-cond: 'IBM Plex Sans Condensed', 'IBM Plex Sans', 'Arial Narrow', sans-serif;
+
+  --color-navy-950: #0e2033;
+  --color-navy-900: #132d48;
+  --color-navy-800: #1a3a5c;
+  --color-navy-700: #24507c;
+  --color-navy-600: #2f6394;
+
+  --color-steel-600: #2c7aa3;
+  --color-steel-500: #3a8fb7;
+  --color-steel-100: #e2f0f7;
+  --color-steel-50: #f0f7fb;
+
+  --color-paper: #f4f6f8;
+  --color-ink: #152536;
+  --color-muted: #5b6b7c;
+  --color-line: #dde3ea;
+  --color-line-strong: #c5cfd9;
+
+  /* thermal scale: cool → hot */
+  --color-cool: #3a8fb7;
+  --color-mild: #7fb7a4;
+  --color-warm: #e8a23e;
+  --color-hot: #e87c3e;
+  --color-scald: #c8402f;
+
+  --color-ok: #2f8f5b;
+  --color-ok-50: #e9f5ee;
+  --color-warn-50: #fdf3e6;
+  --color-hot-50: #fdeee6;
+  --color-scald-50: #fbe9e6;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+:focus-visible {
+  outline: 2px solid var(--color-steel-500);
+  outline-offset: 2px;
+}
+.num {
+  font-family: var(--font-cond);
+  font-variant-numeric: tabular-nums;
+}
+.prose-chat p {
+  margin: 0.35em 0;
+}
+.prose-chat ul,
+.prose-chat ol {
+  margin: 0.35em 0;
+  padding-left: 1.2em;
+}
+.prose-chat ul {
+  list-style: disc;
+}
+.prose-chat ol {
+  list-style: decimal;
+}
+.prose-chat a {
+  color: var(--color-steel-600);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.prose-chat table {
+  border-collapse: collapse;
+  margin: 0.5em 0;
+  font-size: 12.5px;
+}
+.prose-chat th,
+.prose-chat td {
+  border: 1px solid var(--color-line);
+  padding: 3px 6px;
+  text-align: left;
+}
+.prose-chat strong {
+  font-weight: 600;
+}
+.prose-chat h1,
+.prose-chat h2,
+.prose-chat h3 {
+  font-weight: 600;
+  margin: 0.5em 0 0.25em;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
